@@ -5,8 +5,8 @@
              x:Class="MaskedEntryClearValueIssue.MainPage">
 
     <VerticalStackLayout Padding="30,0" Spacing="25">
-        <SfInputs:SfMaskedEntry x:Name="Entry1" />
-        <SfInputs:SfMaskedEntry x:Name="Entry2" />
+        <SfInputs:SfMaskedEntry x:Name="Entry1" ValueChanging="Entry1_ValueChanging" />
+        <SfInputs:SfMaskedEntry x:Name="Entry2" ValueChanging="Entry2_ValueChanging" ValidationMode="KeyPress" />
         <Button x:Name="ClearForm" Text="Clear form" Clicked="ClearForm_Clicked" HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>

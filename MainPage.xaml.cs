@@ -1,4 +1,6 @@
-﻿namespace MaskedEntryClearValueIssue
+﻿using System.Diagnostics;
+
+namespace MaskedEntryClearValueIssue
 {
     public partial class MainPage : ContentPage
     {
@@ -11,6 +13,16 @@
         {
             Entry1.Value = string.Empty;
             Entry2.Value = string.Empty;
+        }
+
+        private void Entry1_ValueChanging(object sender, Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs e)
+        {
+            Debug.WriteLine($"Entry1_ValueChanging: {e.NewValue}");
+        }
+
+        private void Entry2_ValueChanging(object sender, Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs e)
+        {
+            Debug.WriteLine($"Entry2_ValueChanging: {e.NewValue}");
         }
     }
 
