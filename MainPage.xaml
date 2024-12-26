@@ -5,8 +5,8 @@
              x:Class="MaskedEntryClearValueIssue.MainPage">
 
     <VerticalStackLayout Padding="30,0" Spacing="25">
-        <SfInputs:SfMaskedEntry x:Name="Entry1" ValueChanging="Entry1_ValueChanging" />
-        <SfInputs:SfMaskedEntry x:Name="Entry2" ValueChanging="Entry2_ValueChanging" ValidationMode="KeyPress" />
+        <SfInputs:SfMaskedEntry x:Name="Entry1" ValueChanging="Entry1_ValueChanging" MaskType="RegEx" Mask="[A-Za-z0-9]+"  HidePromptOnLeave="True" ValueMaskFormat="ExcludePromptAndLiterals" />
+        <SfInputs:SfMaskedEntry x:Name="Entry2" ValueChanging="Entry2_ValueChanging" MaskType="RegEx" Mask="[A-Za-z0-9]+" ValidationMode="KeyPress" />
         <Button x:Name="ClearForm" Text="Clear form" Clicked="ClearForm_Clicked" HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>
