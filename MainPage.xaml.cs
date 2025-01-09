@@ -24,6 +24,11 @@ namespace MaskedEntryClearValueIssue
         {
             Debug.WriteLine($"Entry2_ValueChanging: {e.NewValue}");
         }
+
+        private void Entry3_ValueChanged(object sender, Syncfusion.Maui.Toolkit.NumericEntry.NumericEntryValueChangedEventArgs e)
+        {
+            Debug.WriteLine($"Entry3_ValueChanging: {e.NewValue}");
+        }
     }
 
 }

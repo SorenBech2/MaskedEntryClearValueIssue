@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:SfInputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:SfNumericEntry="clr-namespace:Syncfusion.Maui.Toolkit.NumericEntry;assembly=Syncfusion.Maui.Toolkit"
              x:Class="MaskedEntryClearValueIssue.MainPage">
 
     <VerticalStackLayout Padding="30,0" Spacing="25">
         <SfInputs:SfMaskedEntry x:Name="Entry1" ValueChanging="Entry1_ValueChanging"  HidePromptOnLeave="True" ValueMaskFormat="ExcludePromptAndLiterals" />
-        <SfInputs:SfMaskedEntry x:Name="Entry2" ValueChanging="Entry2_ValueChanging" MaskType="RegEx" Mask="[A-Za-z 0-9]{0,40}" ValidationMode="KeyPress" />
+        <SfInputs:SfMaskedEntry x:Name="Entry2" ValueChanging="Entry2_ValueChanging" MaskType="RegEx" Mask="[A-Za-z 0-9]{0,40}" ValidationMode="KeyPress" 
+                Placeholder="Masked entry placeholder"  />
+        <SfNumericEntry:SfNumericEntry x:Name="Entry3" ValueChanged="Entry3_ValueChanged" 
+                Placeholder="Numeric entry placeholder" />
         <Button x:Name="ClearForm" Text="Clear form" Clicked="ClearForm_Clicked" HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>
