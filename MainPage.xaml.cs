@@ -13,7 +13,7 @@ namespace MaskedEntryClearValueIssue
         private void ClearForm_Clicked(object sender, EventArgs e)
         {
             Entry1.Value = string.Empty;
-            Entry2.Value = string.Empty;
+            Email.Value = string.Empty;
             ComboBoxResetting.SelectedIndex = -1;
         }
 
@@ -22,9 +22,9 @@ namespace MaskedEntryClearValueIssue
             Debug.WriteLine($"Entry1_ValueChanging: {e.NewValue}");
         }
 
-        private void Entry2_ValueChanging(object sender, Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs e)
+        private void Email_ValueChanging(object sender, Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs e)
         {
-            Debug.WriteLine($"Entry2_ValueChanging: {e.NewValue}");
+            Debug.WriteLine($"Email_ValueChanging: {e.NewValue}");
         }
 
         private void Entry3_ValueChanged(object sender, Syncfusion.Maui.Toolkit.NumericEntry.NumericEntryValueChangedEventArgs e)
