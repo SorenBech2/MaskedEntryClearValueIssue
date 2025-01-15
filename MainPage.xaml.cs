@@ -7,12 +7,14 @@ namespace MaskedEntryClearValueIssue
         public MainPage()
         {
             InitializeComponent();
+            ComboBoxResetting.ItemsSource = new string[] { "Item 1", "Item 2", "Item 3" };
         }
 
         private void ClearForm_Clicked(object sender, EventArgs e)
         {
             Entry1.Value = string.Empty;
             Entry2.Value = string.Empty;
+            ComboBoxResetting.SelectedIndex = -1;
         }
 
         private void Entry1_ValueChanging(object sender, Syncfusion.Maui.Inputs.MaskedEntryValueChangingEventArgs e)

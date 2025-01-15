@@ -11,6 +11,7 @@
                 Placeholder="Masked entry placeholder"  />
         <SfNumericEntry:SfNumericEntry x:Name="Entry3" ValueChanged="Entry3_ValueChanged" 
                 Placeholder="Numeric entry placeholder" />
+        <SfInputs:SfComboBox x:Name="ComboBoxResetting" />
         <Button x:Name="ClearForm" Text="Clear form" Clicked="ClearForm_Clicked" HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>
